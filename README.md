@@ -10,11 +10,13 @@ téléchargement du paquet (aur) sur :
 puis en ligne de commande :
 ```[bash]
 sudo pacman -U ~/Téléchargements/pacmanInfo-0.1.0-1-any.pkg.tar.xz
-(ou) yaourt -U ~/Téléchargements/pacmanInfo-0.1.0-1-any.pkg.tar.xz```
+(ou) yaourt -U ~/Téléchargements/pacmanInfo-0.1.0-1-any.pkg.tar.xz
+```
 
 pour un petit test en ligne de commande:
 ```[bash]
 /usr/share/pacmanInfo/main.py $(kdialog --getopenfilename /usr/share/sounds/ '*.* |tous fichiers' 2>/dev/null)
-/usr/share/pacmanInfo/main.py /etc/rc.local```
+/usr/share/pacmanInfo/main.py /etc/rc.local
+```
 
 ou avec Dolphin par clic droit sur un fichier "*Pacman Administration*"
