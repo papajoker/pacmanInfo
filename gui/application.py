@@ -4,8 +4,8 @@
     GUI
 """
 
-__appname__='pacmanInfo'
-__version__='0.1.0'
+from api.consts import Consts
+
 
 from PyQt5.QtCore import QFileInfo
 from PyQt5.QtWidgets import (QApplication, QCheckBox, QDialog,
@@ -13,11 +13,11 @@ from PyQt5.QtWidgets import (QApplication, QCheckBox, QDialog,
         QCommandLinkButton, QMessageBox,  
         QTabWidget, QVBoxLayout, QWidget)
 
-from pacmantools import *
+from api.pacmantools import *
 import os
 
 import gettext
-gettext.install(__appname__)
+gettext.install(Consts.appname)
 
 LABEL_STYLE=QFrame.Panel | QFrame.Sunken
 
@@ -45,15 +45,14 @@ class TabDialog(QDialog):
         mainLayout = QVBoxLayout()
         mainLayout.addWidget(tabWidget)
         
-        try:
-            key=RepoAttributes.URL.value
-            if (repo.items[key]):
-                self.url=repo.items[key]
-                self.urlbtn = QCommandLinkButton( self.url)
-                self.urlbtn.clicked.connect(self.OnUrlMessage)
-                #mainLayout.addWidget(self.urlbtn)
-        except:
-            pass
+        '''
+        key=RepoAttributes.URL.value
+        if (key in repo.items):
+            self.url=repo.items[key]
+            self.urlbtn = QCommandLinkButton( self.url)
+            self.urlbtn.clicked.connect(self.OnUrlMessage)
+            #mainLayout.addWidget(self.urlbtn)
+        '''
         
         mainLayout.addWidget(buttonBox)
         self.setLayout(mainLayout)
@@ -121,7 +120,7 @@ class repoTab(QWidget):
                 keyLabel = QLabel(key.value)
                 if (key==RepoAttributes.name):
                     url=''
-                    if (repo.items[RepoAttributes.URL.value]):
+                    if (RepoAttributes.URL.value in repo.items):
                         url= 'href="'+repo.items[RepoAttributes.URL.value]+'"'
                     value= '<a {0}><b>{1}</b></a>'.format(url,value)
                 
@@ -151,7 +150,6 @@ class repoTab(QWidget):
         """
             format string if too many dep.
         """
-        print(key.name)
         if  (key!=RepoAttributes.requiredBy) and \
             (key!=RepoAttributes.dependsOn):
             return value

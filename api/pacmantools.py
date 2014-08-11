@@ -5,14 +5,13 @@
     pacman datas structs
 """
 
-__appname__='pacmanInfo'
-__version__='0.1.0'
+from api.consts import Consts
 
 import os
 import subprocess
 
 import gettext
-gettext.install(__appname__)
+gettext.install(Consts.appname)
 
 from enum import Enum
 
@@ -51,14 +50,11 @@ class Pacman:
             return ret[len(ret)-2]
         else:
             raise FileNotFoundError(_('File not found'))
-    
     Qo = classmethod(getQo)
 
     def getQi(cls, repoName):
         "infos sur les attributs du paquet"
-        out= cls.run('Qi',repoName)
-        return out
-    
+        return cls.run('Qi',repoName)
     Qi = classmethod(getQi)
     
     def getQl(cls, repoName):
@@ -69,11 +65,10 @@ class Pacman:
         for i, elt in enumerate(out):
             out[i]=elt[long:]
         return out
-    
     Ql = classmethod(getQl)
     
     def run(cls,options,file):
-        return subprocess.getoutput(cls.pacmanBin+' -'+options+' '+file)
+        return subprocess.getoutput(Pacman.pacmanBin+' -'+options+' '+file)
     run = classmethod(run)
         
 
@@ -99,6 +94,7 @@ class Repot:
          self.name=self.items[_('Name')]
          self.deps.append(self.items[RepoAttributes.optionalDeps.value])
          del self.items[RepoAttributes.optionalDeps.value]
+
     
     @property
     def item(self, r = RepoAttributes.name):

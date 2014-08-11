@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-__appname__='pacmanInfo'
-__version__='0.1.0'
+from api.consts import Consts
 
 """
 for test en
@@ -16,14 +15,26 @@ shell test:
 
 from PyQt5.QtWidgets import (QApplication)
 
-from application import TabDialog
-from pacmantools import *
+from gui.application import TabDialog
+from api.pacmantools import *
 import sys
 import os
 import argparse
 
 import gettext
-gettext.install(__appname__)
+gettext.install(Consts.appname)
+
+class App():
+  def __init__(self):
+    self.consts_ = Consts()
+    self.repository = None
+    self.fileName = ''
+    
+  def run():
+    pass
+  
+  
+  
 
 def parseFile(filename):
     if (os.path.isfile(fileName)!=True):
@@ -60,15 +71,32 @@ def setup():
 
 def unSetup():
     os.remove(fileDesktop())
+    
+    
+
+def main(fileName,argv):
+  app = None
+  if ( not QApplication.instance() ):
+      app = QApplication(argv)
+
+  if ( app ):
+      repot = parseFile(fileName)
+      tabdialog = TabDialog(repot)
+      print ('--- '+Consts.appname+', version: '+Consts.getVersion())
+      tabdialog.show()
+      return app.exec_()
+  
+  return 9
 
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("-dl", "--dl", action="store_true", help=_('Dolphin link'))
-    parser.add_argument("-du", "--du", action="store_true", help=_('Dolphin unlink'))
-    parser.add_argument("file", help="File from pacman")
-    parser.add_argument("-t", "--test", action="store_true", help="for a Test no file arg")
+    parser.add_argument("file", 			 	help="File from pacman")
+    parser.add_argument("-dl",  "--dl",   action="store_true",	help=_('Dolphin link'))
+    parser.add_argument("-du",  "--du",   action="store_true",	help=_('Dolphin unlink'))
+    parser.add_argument("-t",   "--test", action="store_true",	help="for a Test not use file arg")
+    parser.add_argument("-en",  "--en",   action="store_true",	help=_('force locale: en'))
     args = parser.parse_args()
     
     if (args.dl):
@@ -77,7 +105,11 @@ if __name__ == '__main__':
         
     if (args.du):
         unSetup()
-        sys.exit()        
+        sys.exit()
+        
+    if (args.en):
+        import locale
+        locale.setlocale(locale.LC_ALL, 'C')
     
     if (args.file):
         fileName = args.file
@@ -86,9 +118,4 @@ if __name__ == '__main__':
         fileName = "/usr/share/applications/firefox.desktop"
         #fileName = "/usr/share/apps/autocorrect/fr.xml"
     
-    repot = parseFile(fileName)
-    
-    app = QApplication(sys.argv)
-    tabdialog = TabDialog(repot)
-    tabdialog.show()
-    sys.exit(app.exec_())
+    sys.exit(main(fileName,sys.argv))
