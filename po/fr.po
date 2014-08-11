@@ -1,0 +1,157 @@
+# French translations for pacmanInfo package
+# Traductions françaises du paquet pacmanInfo.
+# Copyright (C) 2014 THE pacmanInfo'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pacmanInfo package.
+# patrick <patrick@patrick-hp>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pacmanInfo 5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-05 22:11+0200\n"
+"PO-Revision-Date: 2014-08-09 16:21+0100\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.6.5\n"
+
+#: application.py:38
+msgid "Repo"
+msgstr "Dépôt"
+
+#: application.py:39
+msgid "Files"
+msgstr "Fichiers"
+
+#: application.py:40
+msgid "File"
+msgstr "Fichier"
+
+#: application.py:50 application.py:51 application.py:114
+msgid "URL"
+msgstr "URL"
+
+#: application.py:66
+msgid "Open web"
+msgstr "Ouvrir le site web"
+
+#: application.py:75
+msgid "File Name"
+msgstr "Nom du fichier"
+
+#: application.py:78
+msgid "Path"
+msgstr "Chemin"
+
+#: application.py:82
+msgid "Size"
+msgstr "Taille"
+
+#: application.py:87
+msgid "Last Modified"
+msgstr "Modification"
+
+#: application.py:126 pacmantools.py:61 pacmantools.py:75 pacmantools.py:76
+#: pacmantools.py:85
+msgid "Optional Deps."
+msgstr "Dépendances opt."
+
+#: application.py:143
+msgid "files in repo"
+msgstr "fichiers contenus dans le paquet"
+
+msgid "en"
+msgstr "fr"
+
+msgid "Pacman Actions"
+msgstr "Pacman administration"
+
+msgid "package info"
+msgstr "Information sur le paquet"
+
+#: main.py:18
+msgid "File not found"
+msgstr "Fichier non trouvé"
+
+#: main.py:33
+msgid "Pacman administration"
+msgstr "Pacman administration"
+
+#: main.py:38
+msgid "repository information"
+msgstr "Information sur le paquet"
+
+#: pacmantools.py:29
+msgid "repo not found"
+msgstr "paquet non trouvé"
+
+#: pacmantools.py:74
+msgid "Name"
+msgstr "Nom"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Licenses"
+msgstr "Licences"
+
+msgid "AUR: "
+msgstr "AUR"
+
+msgid "Depends On"
+msgstr "Dépend de"
+
+msgid "Required By"
+msgstr "Requis par"
+
+msgid "Provides"
+msgstr "Fournit"
+
+msgid "Replaces"
+msgstr "Remplace"
+
+msgid "Conflicts With"
+msgstr "Est en conflit avec"
+
+msgid "Repository"
+msgstr "Dépôt"
+
+msgid "Groups"
+msgstr "Groupes"
+
+msgid "Compressed Size"
+msgstr "Taille compressée"
+
+msgid "Download Size"
+msgstr "Taille du téléchargement"
+
+msgid "Installed Size"
+msgstr "Taille installé"
+
+msgid "Packager"
+msgstr "Paqueteur"
+
+msgid "Architecture"
+msgstr "Architecture"
+
+msgid "Install Date"
+msgstr "Installé le"
+
+msgid "Explicitly installed"
+msgstr "Explicitement installé"
+
+msgid "Installed as a dependency for another package"
+msgstr "Installé comme dépendance d'un autre paquet"
+
+msgid "Unknown"
+msgstr "Inconnu"
+
+msgid "Install Reason"
+msgstr "Motif d'installation"

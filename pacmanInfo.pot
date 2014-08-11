@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-06 19:05+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: application.py:37
+msgid "Repo"
+msgstr ""
+
+#: application.py:38
+msgid "Files"
+msgstr ""
+
+#: application.py:39
+msgid "File"
+msgstr ""
+
+#: application.py:68
+msgid "Open web"
+msgstr ""
+
+#: application.py:77
+msgid "File Name"
+msgstr ""
+
+#: application.py:80
+msgid "Path"
+msgstr ""
+
+#: application.py:84
+msgid "Size"
+msgstr ""
+
+#: application.py:89
+msgid "Last Modified"
+msgstr ""
+
+#: application.py:150
+msgid "files in repo"
+msgstr ""
+
+#: main.py:24 pacmantools.py:51
+msgid "File not found"
+msgstr ""
+
+#: main.py:39
+msgid "Pacman administration"
+msgstr ""
+
+#: main.py:44
+msgid "Information sur le paquet"
+msgstr ""
+
+#: pacmantools.py:20
+msgid "Nom"
+msgstr ""
+
+#: pacmantools.py:21
+msgid "Version"
+msgstr ""
+
+#: pacmantools.py:22
+msgid "Description"
+msgstr ""
+
+#: pacmantools.py:23
+msgid "Architecture"
+msgstr ""
+
+#: pacmantools.py:24
+msgid "URL"
+msgstr ""
+
+#: pacmantools.py:25
+msgid "Licences"
+msgstr ""
+
+#: pacmantools.py:26
+msgid "Groups"
+msgstr ""
+
+#: pacmantools.py:27
+msgid "Provides"
+msgstr ""
+
+#: pacmantools.py:28
+msgid "Depends On"
+msgstr ""
+
+#: pacmantools.py:29
+msgid "Optional Deps."
+msgstr ""
+
+#: pacmantools.py:30
+msgid "Required By"
+msgstr ""
+
+#: pacmantools.py:31
+msgid "Conflicts With"
+msgstr ""
+
+#: pacmantools.py:32
+msgid "Replaces"
+msgstr ""
+
+#: pacmantools.py:33
+msgid "Installed Size"
+msgstr ""
+
+#: pacmantools.py:35
+msgid "Install Date"
+msgstr ""
+
+#: pacmantools.py:36
+msgid "Install Reason"
+msgstr ""
+
+#: pacmantools.py:96
+msgid "Name"
+msgstr ""

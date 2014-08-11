@@ -1,0 +1,26 @@
+post_install() {
+ /usr/bin/python /usr/share/pacmanInfo/main.py -dl xxx
+ cat << _EOF
+
+==> Ajout du fichier ~/ .../.kde4/ ... /pacmanInfo.desktop
+    --------------------------------------------
+    pour utiliser le paquet avec Dolphin via un Service Menu
+    
+_EOF
+
+}
+
+post_upgrade() {
+ post_install
+}
+
+pre_remove() {
+ cat << _EOF
+
+==> Suppression du fichier ~/ ... /.kde4/ ... /pacmanInfo.desktop
+    --------------------------------------------
+    pour libérer le Service Menu Dolphin
+    
+_EOF
+ /usr/bin/python /usr/share/pacmanInfo/main.py -du xxx
+}

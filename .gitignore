@@ -1,0 +1,11 @@
+_pycache_
+*.pyc
+InfoPacmanAsSu
+InfoPacmanAsSu.desktop
+PKGBUILD
+.directory
+.projet
+opend
+*.komodoproject
+*.tmp
+*.gz
