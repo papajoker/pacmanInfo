@@ -67,6 +67,11 @@ class Pacman:
         return out
     Ql = classmethod(getQl)
     
+    def Qmq(cls, repoName):
+        "AUR packages or other"
+        return cls.run('Qml',repoName)
+    Qml = sorted(classmethod(getQml))
+    
     def run(cls,options,file):
         return subprocess.getoutput(Pacman.pacmanBin+' -'+options+' '+file)
     run = classmethod(run)
