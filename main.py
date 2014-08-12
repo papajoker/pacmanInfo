@@ -97,6 +97,16 @@ if __name__ == '__main__':
     parser.add_argument("-du",  "--du",   action="store_true",	help=_('Dolphin unlink'))
     parser.add_argument("-t",   "--test", action="store_true",	help="for a Test not use file arg")
     parser.add_argument("-en",  "--en",   action="store_true",	help=_('force locale: en'))
+    
+    """
+    TODO
+      parser.add_argument("-ta",   "--tabaur",     action="store_true",	help=_('Tab aur'))
+      parser.add_argument("-tf",   "--tabfiles",   action="store_true",	help=_('Tab files'))
+      parser.add_argument("-tp",   "--tabbtn",     action="store_true",	help=_('Tab plus'))
+      
+      parser.add_argument("-tab",  "--tababout",   action="store_true",	help=_('Tab about'))
+      parser.add_argument("-tc",   "--tabconfig",  action="store_true",	help=_('Tab Setup')) ?
+    """
     args = parser.parse_args()
     
     if (args.dl):
