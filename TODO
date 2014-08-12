@@ -1,0 +1,7 @@
+- add onglet pacman -Qmq
+- load pacmanInfo with tabs options
+     : -ta --tabaur
+       -tf --tabfiles
+       -tab --tababout
+       -tc  --tabConfiguration ?
+       -tp --tabplus (btns stats--vue conf--modif conf...?)
