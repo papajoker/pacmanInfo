@@ -53,9 +53,14 @@ class Pacman:
     Qo = classmethod(getQo)
 
     def getQi(cls, repoName):
-        "infos sur les attributs du paquet"
+        "infos sur les attributs du paquet local"
         return cls.run('Qi',repoName)
     Qi = classmethod(getQi)
+    
+    def getSi(cls, repoName):
+        "infos sur les attributs du paquet online"
+        return cls.run('Si',repoName)
+    Si = classmethod(getSi)
     
     def getQl(cls, repoName):
         "liste des fichiers du paquet"
